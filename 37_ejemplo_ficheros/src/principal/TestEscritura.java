@@ -1,4 +1,4 @@
-ipackage principal;
+package principal;
 
 import java.io.IOException;
 import java.io.PrintStream;

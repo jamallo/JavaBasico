@@ -19,7 +19,7 @@ public class Notas {
 		System.out.println("La nota mayor es: " + mayor(notas));
 		System.out.println("La nota menor es: " + menor(notas));
 		imprimirAprobados(notas);
-		
+	}	
 		
 		public static void rellenarNotas (ArrayList<Double> notas) {
 			Scanner sc= new Scanner (System.in);
@@ -41,23 +41,23 @@ public class Notas {
 			} return media/notas.size();
 		}
 		
-		private static double mayor ( double [] notas) {
-			double mayor = notas [0];
+		private static double mayor ( ArrayList <Double> notas) {
+			double mayor = notas.get(0);
 			for (double n: notas) {
 				mayor = Math.max(n, mayor);
 				//}
 			} return mayor;
 		}
 		
-		private static double menor ( double [] notas) {
-			double menor = notas [0];
+		private static double menor ( ArrayList <Double> notas) {
+			double menor = notas.get(0);
 			for (double n:notas) {
 				menor = Math.min(n, menor);
 				//}
 			} return menor;
 		}
 		
-		private static void imprimirAprobados ( double [] notas) {
+		private static void imprimirAprobados ( ArrayList<Double> notas) {
 			System.out.println("Aprobado");
 			for(double n: notas) {
 				if (n>=5) {
@@ -66,5 +66,5 @@ public class Notas {
 			}
 		}
 		
-	}
+}
 
